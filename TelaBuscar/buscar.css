@@ -1,0 +1,110 @@
+/* Fundo Roxo (Opcional, para contextualizar o tema) */
+body {
+  background-color: #4c00b0;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* 1. Contêiner Principal */
+.area-busca {
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+  width: 100%;
+  max-width: 500px; 
+  padding: 10px;
+}
+
+/* 2. Campo de Busca */
+.campo-busca {
+  display: flex;
+  align-items: center;
+  background-color: #2b0066; 
+  border-radius: 12px; 
+  padding: 10px 16px;
+  flex: 1; 
+  gap: 12px; 
+}
+
+/* Estilo da Lupa */
+.campo-busca img {
+  width: 20px;
+  height: 20px;
+  stroke: #ffffff; 
+
+
+}
+
+/* Estilo do Input de Texto */
+.campo-busca input {
+  background: transparent;
+  border: none; 
+  outline: none; 
+  color: #ffffff; 
+  font-size: 15px;
+  width: 100%;
+}
+
+/* Estilo do texto de ajuda (Placeholder) */
+.campo-busca input::placeholder {
+  color: #b3a0d6; 
+  font-weight: 400;
+}
+
+/* 3. Botão Cancelar */
+.botao-cancelar {
+  background-color: #2b0066; 
+  border: none;
+  border-radius: 12px; 
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botao-cancelar span {
+  color: #ffffff; 
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+.botao-cancelar:hover {
+  background-color: #3b008c;
+}
+
+
+
+.historico-busca {
+     backdrop-filter: blur(50px);
+    background-color: #2E0F72;
+
+    border-radius: 30px;
+
+    padding: 200px 700px;
+   
+
+    height: auto;
+
+    box-shadow: 
+    inset 0 4px 4px rgba(0, 0, 0, 0.25); /*sombra externa*/
+
+    display: flex;
+    flex-direction: column;
+}
+
+.historico-busca h1 {
+    display: flex;
+    align-items: flex-start ;
+    gap: 20px;
+    color: #ffffff;
+}
+
+
+
+.nome-Musica {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
