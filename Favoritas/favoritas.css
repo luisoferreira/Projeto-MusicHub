@@ -1,0 +1,324 @@
+/* ===== Variáveis ===== */
+:root {
+  --roxo-topo: #5000c8;
+  --roxo-meio: #4a00b8;
+  --roxo-fundo: #2a1a4a;
+  --roxo-lateral: #3d0a9e;
+  --roxo-destaque: #5a00e6;
+  --azul-play: #2f9fd8;
+  --azul-ativo: #3aa7e8;
+  --branco: #ffffff;
+  --texto-suave: #d9cffa;
+  --fonte: "Zilla Slab", Georgia, "Times New Roman", serif;
+}
+ 
+/* ===== Reset ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+html, body { height: 100%; }
+ 
+body {
+  font-family: var(--fonte);
+  color: var(--branco);
+  background: #ffffff;
+}
+ 
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+img { display: block; }
+ 
+/* ===== Layout geral (grid: lateral + topo + conteúdo) ===== */
+.aplicativo {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  grid-template-rows: 58px 1fr;
+  grid-template-areas:
+    "barra-lateral barra-superior"
+    "barra-lateral conteudo";
+  height: 100vh;
+  min-height: 672px;
+  background: var(--roxo-lateral);
+  overflow: hidden;
+}
+ 
+/* ===== Barra lateral ===== */
+.barra-lateral {
+  grid-area: barra-lateral;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #3a0896 0%, #430aa8 100%);
+  z-index: 2;
+}
+ 
+.barra-lateral__alternar {
+  position: absolute;
+  top: 89px;
+  right: -7px;
+  width: 17px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  background: #22103f;
+  border-radius: 50%;
+}
+ 
+.barra-lateral__navegacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  margin-top: 178px;
+  font-size: 19px;
+}
+ 
+.barra-lateral__navegacao a { opacity: .95; }
+.barra-lateral__navegacao a:hover { color: var(--azul-ativo); }
+.barra-lateral__navegacao a.ativo { color: var(--azul-ativo); }
+ 
+.barra-lateral__inicio {
+  margin-top: auto;
+  width: 100%;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  background: var(--roxo-destaque);
+}
+ 
+/* ===== Barra superior ===== */
+.barra-superior {
+  grid-area: barra-superior;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 29px 0 36px;
+  background: linear-gradient(180deg, #3f00a3 0%, #5200cc 100%);
+}
+ 
+.logotipo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.logotipo i { color: #3aa7e8; font-size: 19px; }
+.logotipo span { color: #6bb8ff; }
+.logotipo b {
+  background: linear-gradient(90deg, #4f7bff, #b04cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+ 
+.barra-superior__direita {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+ 
+.botao-busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 29px;
+  padding: 0 14px 0 10px;
+  border: 1.5px solid var(--branco);
+  border-radius: 999px;
+  font-size: 10px;
+  letter-spacing: .3px;
+}
+.botao-busca i { font-size: 14px; }
+.botao-busca span { margin-left: 5px; }
+ 
+.divisor {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, .55);
+}
+.divisor--alto { height: 53px; margin: 0 7px; }
+ 
+.link-biblioteca {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 8.5px;
+  letter-spacing: .3px;
+}
+.link-biblioteca i { font-size: 19px; }
+ 
+.avatar {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #cfcfd6;
+  color: #8a8a94;
+  font-size: 16px;
+  overflow: hidden;
+}
+ 
+.botao-configuracoes { font-size: 23px; margin-left: 7px; }
+ 
+/* ===== Conteúdo principal ===== */
+.conteudo {
+  grid-area: conteudo;
+  padding: 22px 72px 29px 144px;
+  background: linear-gradient(180deg, #5200cc 0%, #4a00b8 30%, #3a1180 65%, #2a1a4a 100%);
+  border-top-left-radius: 0;
+  overflow-y: auto;
+}
+ 
+/* Cabeçalho da playlist */
+.cabecalho-playlist {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+ 
+.capa-playlist {
+  flex: 0 0 auto;
+  width: 163px;
+  height: 163px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #5b12c4 0%, #3d00a0 60%, #4a0fb5 100%);
+  box-shadow: 0 7px 26px rgba(15, 0, 60, .55);
+  font-size: 74px;
+}
+.capa-playlist i {
+  color: #fff;
+  filter: drop-shadow(0 4px 8px rgba(20, 0, 80, .45));
+}
+ 
+.informacoes-playlist { padding-top: 7px; }
+ 
+.informacoes-playlist h1 {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+ 
+.informacoes-playlist p {
+  margin-top: 19px;
+  font-size: 16px;
+  font-weight: 400;
+}
+ 
+/* Botões de ação */
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 10px;
+}
+ 
+.botao-reproduzir {
+  width: 53px;
+  height: 53px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--azul-play);
+  color: #2b0a78;
+  font-size: 22px;
+  padding-left: 4px;
+  transition: transform .15s ease, filter .15s ease;
+}
+.botao-reproduzir:hover { transform: scale(1.06); filter: brightness(1.08); }
+ 
+.botao-icone { font-size: 26px; margin-left: 5px; }
+.botao-icone--circular {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  margin-left: 0;
+  border: 1.5px solid var(--branco);
+  border-radius: 50%;
+  font-size: 18px;
+}
+.botao-icone:hover { color: var(--azul-ativo); }
+.botao-icone--circular:hover { border-color: var(--azul-ativo); }
+ 
+/* ===== Tabela de músicas ===== */
+.lista-musicas {
+  margin-top: 31px;
+  font-size: 16px;
+}
+ 
+.lista-musicas__linha {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1.9fr) minmax(0, 1.5fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
+  align-items: center;
+  min-height: 36px;
+  text-align: center;
+}
+ 
+/* # e Título alinhados à esquerda */
+.lista-musicas__linha > :nth-child(1),
+.lista-musicas__linha > :nth-child(2) { text-align: left; }
+ 
+.lista-musicas__linha--cabecalho {
+  min-height: 34px;
+  margin-bottom: 5px;
+  color: var(--texto-suave);
+  font-size: 16px;
+}
+ 
+.lista-musicas__linha:not(.lista-musicas__linha--cabecalho) > :nth-child(3),
+.lista-musicas__linha:not(.lista-musicas__linha--cabecalho) > :nth-child(4),
+.lista-musicas__linha:not(.lista-musicas__linha--cabecalho) > :nth-child(5) {
+  font-family: "Zilla Slab", Georgia, serif;
+  letter-spacing: .2px;
+}
+ 
+.lista-musicas__linha:not(.lista-musicas__linha--cabecalho):hover {
+  background: rgba(255, 255, 255, .07);
+  border-radius: 4px;
+}
+ 
+.lista-musicas__titulo {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding-left: 0;
+}
+ 
+.miniatura {
+  width: 26px;
+  height: 26px;
+  object-fit: cover;
+  border-radius: 1px;
+  background: #555; /* aparece enquanto a capa não existe */
+}
+.miniatura--1 { background: #3b3b3b; }
+.miniatura--2 { background: #6b5a4a; }
+.miniatura--3 { background: #cfcfcf; }
+.miniatura--4 { background: #3f4a34; }
+.miniatura--5 { background: #d9822b; }
+.miniatura--6 { background: #8a4b4b; }
+ 
+/* ===== Responsivo ===== */
+@media (max-width: 900px) {
+  .conteudo { padding: 22px 34px 29px 67px; }
+  .informacoes-playlist h1 { font-size: 36px; }
+}
+ 
+@media (max-width: 640px) {
+  .aplicativo { grid-template-columns: 38px 1fr; }
+  .conteudo { padding: 19px 17px 24px 36px; }
+  .cabecalho-playlist { flex-direction: column; align-items: flex-start; gap: 19px; }
+  .informacoes-playlist h1 { font-size: 31px; }
+  .botao-busca span, .link-biblioteca span { display: none; }
+ 
+  /* esconde Álbum e Favoritada em, mantém Título e Minutagem */
+  .lista-musicas__linha { grid-template-columns: 26px 1fr 84px; }
+  .lista-musicas__linha > :nth-child(3),
+  .lista-musicas__linha > :nth-child(4) { display: none; }
+}
