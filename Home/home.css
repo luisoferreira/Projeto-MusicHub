@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+
+}
+
+.caixa-header {
+    width: 100vw;
+    height: 100px;
+    background: linear-gradient(90deg, #290972, #4E11D8);
+    display: block;
+}
+
+.caixa-lateral {
+    width: 5.22vw;
+    height: 100vh;
+    background: linear-gradient(#290972, #4E11D8);
+}
+
+.logo {
+    position: absolute;
+    top: -20px;
+    left: 5.22vw;
+}
+
+body {
+    background-color: #251F32;
+}
+
+.fundo-centro {
+    width: 90vw;
+    height: 75vh;
+    background: linear-gradient(#5E26E0, #6F29C0);
+}
