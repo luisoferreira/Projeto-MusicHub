@@ -1,0 +1,114 @@
+* {
+    /* Configuração universal*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+    background-color: #1F5FA8;
+    /*cor do fundo dos elementos*/
+    color: #ffffff;
+    /* Cor do texto*/
+    text-align: center;
+    /* alinhmnto do texto*/
+    padding: 20px;
+    /*Espaçamento interno dos elementos*/
+}
+
+#Titulo-principal {
+    font-size: 30px;
+    /* Tamanho da fonte/texto*/
+}
+
+span {
+    color: #FFCC00;
+}
+
+/* CONTEUDO PRINCIPAL */
+
+.conteudo {
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+}
+
+.sobre,
+.turmas,
+.inscricao {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #1F5FA8;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.imagem-curso {
+    border-radius: 10px;
+    /*Arredondamento dos cantos*/
+    width: 500px;
+    /*Largura dos elementos*/
+}
+
+table {
+    border: 1px solid #999999;
+    /*Border -> peso, estilo da borda (sem traçados e sem pontinhos). cor*/
+    border-radius: 5px;
+}
+
+th,
+td {
+    border: 1px solid #999999;
+    padding: 10px;
+    text-align: left;
+    /*Alinhamento do texto para a */
+}
+
+th {
+    background-color: #d9e8f5;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #1F5FA8;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+
+
+.rodape {
+    background-color: #1F5FA8;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+input{
+    text-align: left;
+
+}
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha primeira página</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cabecalho">
+        <h1 id="Titulo principal">Curso de <span>Tecnologia</span></h1>
+        <p>Aprenda os primeiros passos do densenvolvimento web</p>
+    </div>
+    <div class="conteudo">
+        <div class="sobre">
+            <h2>Sobre o curso</h2>
+            <p>Durante o curso, você, aprenderá a criar páginas utilizando HTML e CSS</p>
+
+            <h3>Conteúdos</h3>
+
+            <ul>
+                <!-- UL= lista não ordenada -->
+                <!-- Cada lI é um item dessa lista-->
+                <li>Estrutura do HTLM </li>
+                <li>Tags de texto </li>
+                <li>Listas e tabelas </li>
+                <li>Formulários </li>
+            </ul>
+
+            <h3>Etapas para participar</h3>
+            <ol>
+                <!-- OL: Lista ordenada -->
+                <Li>Preencher o formulário</Li>
+                <Li>Confirmar a descrição</Li>
+                <Li>Participar das aulas</Li>
+            </ol>
+        </div>
+        <img src="imgs/imagem-turma.jpeg" width="100px" alt="Alunos participando do curso de tecnologia"
+            class="imagem-curso">
+        <div class="turmas">
+            <h2>Turmas disponiveis</h2>
+
+            <!-- TABELA-->
+            <Table>
+                <!-- linha horizontal da tabela-->
+                <tr>
+                    <!-- Linha de cabecalho (texto fica em negrito e centralizado por padrao)-->
+                    <th>Turma</th>
+                    <th>Horário</th>
+                    <th>Vagas</th>
+                </tr>
+                <tr>
+                    <!-- TD é cada celula de dado da tabela(linhas comuns) -->
+                    <td>Turma A</td>
+                    <td>08h as 12h</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <!-- TD é cada celula de dado da tabela(linhas comuns) -->
+                    <td>Turma B</td>
+                    <td>13h as 17h</td>
+                    <td>15</td>
+                </tr>
+            </Table>
+        </div>
+        <div class="inscricao">
+            <h2>Formulário de inscrição</h2>
+
+            <!-- Formulário -->
+             <form>
+                <label for="Nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome"> 
+
+                <label for="E-mail">E-mail:</label>
+                <input type="text" required id="email" placeholder="Digite seu e-mail"> 
+
+                <label for="Senha">Senha:</label>
+                <input type="password" id="senha" placeholder="Digite sua senha"> 
+
+                <label for="data">Data de nascimento:</label>
+                <input type="date" id="data" min="1990-01-01" max="2026-12-31"> 
+
+                <label for="Telefone">Telefone:</label>
+                <input type="tel" id="Telefone" placeholder="(00) 00000-0000">
+
+                <label for="Idade">Idade:</label>
+                <input type="number" id="Idade" min="14" max="100"> 
+
+                <p>Escolha um período:</p>
+                <input type="radio" id="manha" name="opcao">
+                <label for="manhã">manhã</label>
+
+                <input type="radio" id="manha" name="opcao">
+                <label for="Tarde">Tarde</label>
+
+                <input type="radio" id="manha" name="opcao">
+                <label for="Noite">Noite</label>
+
+                <label for="Turma">Escolha uma turma</label>
+                <select id="turma">
+                     <option selected disabled>Selecione uma turma</option>
+                <option>Turma A</option>
+                <option>Turma B</option>
+                <option>Turma C</option>
+                <option>Turma D</option>
+                </select>
+                <label for="mensagem">Porque desja participar?</label>
+                <textarea id="mensagem" rows="4" placeholder="Digite os motivos da sua inscrição"></textarea>
+                <!-- ROWS= quantidade de linhas visiveis na caixa de texto -->
+
+                <input type="checkbox" id="novidades">
+                <label for="novidades">Desejo receber novidades por e-mail.</label>
+
+                <input type="checkbox" id="termos">
+                <label for="termos">Aceito os termos da inscrição</label>
+
+                <label for="foto">Escolha uma foto:</label>
+                <input type="file" id="foto">
+
+                <button type="reset">Limpar</button>
+                <button type="submit">Increver-se</button>
+               
+             </form>
+        </div>
+    </div>
+    <div class="rodape">
+        <p>Curso de tecnologia - <span>2026</span></p>
+    </div>
+
+</html>
