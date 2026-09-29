@@ -1,40 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusicHub</title>
-
-    <link rel="stylesheet" href="buscar.css">
-    <link rel="shortcut icon" href="../Assets/Logo horizontal.svg" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MusicHub - Buscar</title>
+  <link rel="stylesheet" href="buscar.css">
 </head>
-
 <body>
-<!-- Cabeçalho -->
+  <div class="tela">
+
+    <header class="cabecalho">
+      <a class="logo" href="#" aria-label="MusicHub">
+        <span class="logo-icone">&#127911;</span>MusicHub
+      </a>
+      <nav class="cabecalho-acoes">
+        <a class="botao-biblioteca" href="#">
+          <span class="icone-biblioteca">&#9646;&#9646;&#9646;</span>
+          <span>BIBLIOTECA</span>
+        </a>
+        <span class="divisor-vertical"></span>
+        <span class="avatar" aria-label="Perfil"></span>
+        <button class="botao-configuracoes" aria-label="Configurações">&#9881;</button>
+      </nav>
     </header>
-<section class="pesquisa">
-    <div class="area-busca">
 
-                <div class="campo-busca">
-                   <img src="../Assets/Busca.svg" alt="">
-                    <input type="text" placeholder="O que você quer ouvir?">
-                </div>
+    <aside class="menu-lateral">
+      <button class="botao-expandir" aria-label="Expandir menu">&rsaquo;</button>
+      <nav class="menu-itens">
+        <a href="#" class="menu-item" aria-label="Artistas">&#128100;</a>
+        <a href="#" class="menu-item menu-item-ativo" aria-label="Biblioteca">&#9646;&#9646;</a>
+        <a href="#" class="menu-item" aria-label="Músicas">&#9835;</a>
+      </nav>
+      <a href="#" class="menu-item menu-inicio" aria-label="Início">&#8962;</a>
+    </aside>
 
-                <button class="botao-cancelar">
-                    <span>Cancelar</span>
-                </button>
-    </div>
-     <section class="historico-busca">
-           <h1>Buscas recentes</h1>
-           <div class="musicas-buscadasIMG">
-            <img src="../Assets/Musica Carnivoro.svg" alt="">
-           </div>
-         <div class="nome-Musica">
-            <h2>Carnívoro</h2>
-            <p>Música • Mc Jacaré, Mc Lele JP, Mc Negão Original</p>
-            <span></span>
-        </div>
-     </section>
-     </section>
+    <main class="conteudo">
+      <div class="barra-busca-area">
+        <label class="campo-busca">
+          <span class="campo-busca-icone">&#128269;</span>
+          <input type="search" placeholder="O que você quer ouvir?">
+        </label>
+        <button class="botao-cancelar">Cancelar</button>
+      </div>
+
+      <section class="painel">
+        <h2 class="titulo-secao">Buscas recentes</h2>
+
+        <ul class="lista-buscas">
+          <li class="item-busca">
+            <div class="capa capa-carnivoro">
+                <img src="../Assets/Musica Carnivoro.svg" alt="">
+            </div>
+            <div class="item-busca-texto">
+              <h3>Carnívoro</h3>
+              <p>Música &bull; Mc Jacaré, Mc Lele JP, Mc Negão Original</p>
+            </div>
+          </li>
+          <li class="item-busca">
+            <div class="capa capa-melhor-eu-ir">
+                <img src="../Assets/Musica Melhor Eu Ir.svg" alt="">
+            </div>
+            <div class="item-busca-texto">
+              <h3>Melhor Eu Ir</h3>
+              <p>Música &bull; Péricles</p>
+            </div>
+          </li>
+          <li class="item-busca">
+            <div class="capa capa-vida-cara">
+                <img src="../Assets/Musica Vida Cara.svg" alt="">
+            </div>
+            <div class="item-busca-texto">
+              <h3>Vida Cara</h3>
+              <p>Álbum &bull; Orochi</p>
+            </div>
+          </li>
+        </ul>
+
+        <h2 class="titulo-secao">Músicas mais pesquisadas no Brasil</h2>
+
+        <ol class="lista-ranking">
+          <li class="item-ranking">
+            <span class="posicao">1</span>
+            <div class="capa capa-ranking capa-1"></div>
+            <strong>Eu Te Seguro</strong>
+            <small>Panda , MJ Records</small>
+          </li>
+          <li class="item-ranking">
+            <span class="posicao">2</span>
+            <div class="capa capa-ranking capa-2"></div>
+            <strong>Cuida do Pet</strong>
+            <small>Mc Negão Original, MC Wi...</small>
+          </li>
+          <li class="item-ranking">
+            <span class="posicao">3</span>
+            <div class="capa capa-ranking capa-3"></div>
+            <strong>Ele Quer Ser Eu</strong>
+            <small>Henrique &amp; Juliano</small>
+          </li>
+          <li class="item-ranking">
+            <span class="posicao">4</span>
+            <div class="capa capa-ranking capa-4"></div>
+            <strong>Mente Barulhenta</strong>
+            <small>MC IG, Mc Lele JP</small>
+          </li>
+          <li class="item-ranking">
+            <span class="posicao">5</span>
+            <div class="capa capa-ranking capa-5"></div>
+            <strong>Menos Foco Mais Ansiedade</strong>
+            <small>Mc Jacaré, Mc Lele JP, Mc Luu...</small>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+  </div>
 </body>
 </html>
