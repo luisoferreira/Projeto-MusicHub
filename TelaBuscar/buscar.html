@@ -9,42 +9,52 @@
 <body>
   <div class="tela">
 
-    <header class="cabecalho">
-      <a class="logo" href="#" aria-label="MusicHub">
-        <span class="logo-icone">&#127911;</span>MusicHub
-      </a>
-      <nav class="cabecalho-acoes">
-        <a class="botao-biblioteca" href="#">
-          <span class="icone-biblioteca">&#9646;&#9646;&#9646;</span>
-          <span>BIBLIOTECA</span>
-        </a>
-        <span class="divisor-vertical"></span>
-        <span class="avatar" aria-label="Perfil"></span>
-        <button class="botao-configuracoes" aria-label="Configurações">&#9881;</button>
+     <!-- Barra lateral -->
+    <aside class="barra-lateral">
+
+      <button class="botao-seta"><img src="../Assets/seta.svg" alt=""></button>
+      
+      <nav class="barra-lateral__navegacao">
+        <a href="#" aria-label="Perfil"> <img src="../Assets/Icone ouvindo.svg" alt=""></a>
+        <a href="#" aria-label="Biblioteca"><img src="../Assets/Icone biblioteca.svg" alt=""></a>
+        <a href="#" class="ativo" aria-label="Músicas favoritas"><img src="../Assets/Icone musicas curtidas.svg" alt=""></i></a>
       </nav>
+
+      <a href="#" class="barra-lateral__inicio" aria-label="Início"><i class="fa-solid fa-house"></i></a>
+
+    </aside>
+ 
+    <!-- Barra superior -->
+    <header class="barra-superior">
+
+      <a href="#" class="logotipo">
+        <img src="../Assets/Logo horizontal.svg">
+      </a>
+ 
+      <div class="barra-superior__direita">
+
+        <button class="botao-busca"><img src="../Assets/Busca.svg" alt=""><span>BUSCAR</span></button>
+        <span class="divisor"></span>
+        <a href="#" class="link-biblioteca"><img src="../Assets/Icone biblioteca.svg" alt=""><span>BIBLIOTECA</span></a>
+        <span class="divisor"></span>
+        <span class="avatar"> <img src="../Assets/Icone perfil.svg" alt=""></i></span>
+        <button class="botao-configuracoes" aria-label="Configurações"> <img src="../Assets/Icone configuracoes.svg" alt=""></button>
+
+      </div>
+
     </header>
 
-    <aside class="menu-lateral">
-      <button class="botao-expandir" aria-label="Expandir menu">&rsaquo;</button>
-      <nav class="menu-itens">
-        <a href="#" class="menu-item" aria-label="Artistas">&#128100;</a>
-        <a href="#" class="menu-item menu-item-ativo" aria-label="Biblioteca">&#9646;&#9646;</a>
-        <a href="#" class="menu-item" aria-label="Músicas">&#9835;</a>
-      </nav>
-      <a href="#" class="menu-item menu-inicio" aria-label="Início">&#8962;</a>
-    </aside>
-
     <main class="conteudo">
-      <div class="barra-busca-area">
+      <div class="barra-pesquisa">
         <label class="campo-busca">
-          <span class="campo-busca-icone">&#128269;</span>
+           <button class="botao-busca2"><img src="../Assets/Busca.svg" alt=""></button>
           <input type="search" placeholder="O que você quer ouvir?">
         </label>
         <button class="botao-cancelar">Cancelar</button>
       </div>
 
       <section class="painel">
-        <h2 class="titulo-secao">Buscas recentes</h2>
+        <h1 class="titulo-secao">Buscas recentes</h1>
 
         <ul class="lista-buscas">
           <li class="item-busca">
@@ -76,36 +86,46 @@
           </li>
         </ul>
 
-        <h2 class="titulo-secao">Músicas mais pesquisadas no Brasil</h2>
+        <h1 class="titulo-secao2">Músicas mais pesquisadas no Brasil</h1>
 
         <ol class="lista-ranking">
-          <li class="item-ranking">
+          <li class="rank-musicas">
             <span class="posicao">1</span>
-            <div class="capa capa-ranking capa-1"></div>
+            <div class="capa capa-ranking capa-1">
+              <img src="../Assets/Musica Eu Te Seguro.svg" alt="">
+            </div>
             <strong>Eu Te Seguro</strong>
             <small>Panda , MJ Records</small>
           </li>
-          <li class="item-ranking">
+          <li class="rank-musicas">
             <span class="posicao">2</span>
-            <div class="capa capa-ranking capa-2"></div>
+            <div class="capa capa-ranking capa-2">
+              <img src="../Assets/Musica Cuida do Pet.svg" alt="">
+            </div>
             <strong>Cuida do Pet</strong>
             <small>Mc Negão Original, MC Wi...</small>
           </li>
-          <li class="item-ranking">
+          <li class="rank-musicas">
             <span class="posicao">3</span>
-            <div class="capa capa-ranking capa-3"></div>
+            <div class="capa capa-ranking capa-3">
+              <img src="../Assets/Musica Ele quer ser eu.svg" alt="">
+            </div>
             <strong>Ele Quer Ser Eu</strong>
             <small>Henrique &amp; Juliano</small>
           </li>
-          <li class="item-ranking">
+          <li class="rank-musicas">
             <span class="posicao">4</span>
-            <div class="capa capa-ranking capa-4"></div>
+            <div class="capa capa-ranking capa-4">
+              <img src="../Assets/Musica Mente Barulhenta.svg" alt="">
+            </div>
             <strong>Mente Barulhenta</strong>
             <small>MC IG, Mc Lele JP</small>
           </li>
-          <li class="item-ranking">
+          <li class="rank-musicas">
             <span class="posicao">5</span>
-            <div class="capa capa-ranking capa-5"></div>
+            <div class="capa capa-ranking capa-5">
+              <img src="../Assets/Musica Menos Foco.svg" alt="">
+            </div>
             <strong>Menos Foco Mais Ansiedade</strong>
             <small>Mc Jacaré, Mc Lele JP, Mc Luu...</small>
           </li>
