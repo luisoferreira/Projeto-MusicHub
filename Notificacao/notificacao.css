@@ -1,0 +1,201 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #252230;
+  color: #ffffff;
+  font-family: "Zilla Slab", Georgia, serif;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  color: #ffffff;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 66px;
+  z-index: 10;
+  background-color: #4a00c4;
+  background-image: linear-gradient(90deg, #350090, #5a00d6);
+}
+
+.logo {
+  position: absolute;
+  top: -10px;
+  left: 56px;
+  height: 96px;
+  width: auto;
+}
+
+.cabecalho__acoes {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.botao-busca {
+  display: flex;
+  align-items: center;
+  height: 33px;
+  padding: 0 12px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.botao-busca img {
+  width: 21px;
+  height: 21px;
+  margin-right: 9px;
+}
+
+.divisor {
+  width: 1px;
+  height: 42px;
+  margin: 0 10px 0 13px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.link-biblioteca + .divisor {
+  margin: 0 46px 0 23px;
+}
+
+.link-biblioteca {
+  display: flex;
+  align-items: center;
+}
+
+.link-biblioteca img {
+  width: 29px;
+  height: 29px;
+  margin-right: 8px;
+}
+
+.avatar {
+  width: 37px;
+  height: 37px;
+  padding: 6px;
+  margin-right: 47px;
+  border-radius: 50%;
+  background-color: #a9a9a9;
+}
+
+.icone-configuracoes {
+  width: 28px;
+  height: 28px;
+}
+
+/* ---------- Barra lateral ---------- */
+.barra-lateral {
+  position: fixed;
+  top: 66px;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  padding-top: 149px;
+  z-index: 5;
+  background-color: #4500b8;
+  background-image: linear-gradient(180deg, #3d0096, #5000cf);
+}
+
+.barra-lateral img {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 20px auto;
+}
+
+.barra-lateral .inicio {
+  position: absolute;
+  left: 16px;
+  bottom: 38px;
+  margin: 0;
+}
+
+/* seta desenhada em CSS (não precisa de imagem) */
+.seta {
+  position: absolute;
+  top: 55px;
+  left: 55px;
+  width: 10px;
+  height: 10px;
+  border-top: 2.5px solid #ffffff;
+  border-right: 2.5px solid #ffffff;
+  transform: rotate(45deg);
+}
+
+/* ---------- Conteúdo principal ---------- */
+.principal {
+  margin-left: 60px;
+  padding: 113px 34px 65px 20px;
+}
+
+.painel {
+  min-height: 554px;
+  border-radius: 18px;
+  text-align: center;
+  background-color: #6a1fd0;
+  background-image: linear-gradient(180deg, #601be4, #7626b8);
+}
+
+.painel__topo {
+  position: relative;
+  height: 88px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.painel__titulo {
+  margin: 0;
+  font-size: 34px;
+  line-height: 88px;
+}
+
+.botao-limpar {
+  position: absolute;
+  top: 33px;
+  left: 65px;
+  font-size: 21px;
+  line-height: 24px;
+  color: #ff1f1f;
+  text-decoration: underline;
+}
+
+.aviao {
+  width: 52px;
+  height: 52px;
+  margin: 54px auto 12px auto;
+}
+
+.painel__texto {
+  margin: 0;
+  font-size: 21px;
+}
