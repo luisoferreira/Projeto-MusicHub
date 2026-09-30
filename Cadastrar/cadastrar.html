@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - Cadastrar Música</title>
+
+    <link rel="stylesheet" href="../Cadastrar/cadastrar.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="topo">
+
+        <img src="../Assets/Logo horizontal.svg" class="logo">
+
+        <div class="menu-topo">
+
+            <button class="buscar">
+                <img src="../Assets/Busca.svg">
+                BUSCAR
+            </button>
+
+            <div class="linha"></div>
+
+            <button class="biblioteca">
+                <img src="../Assets/Icone biblioteca.svg">
+                BIBLIOTECA
+            </button>
+
+            <div class="linha"></div>
+
+            <img src="../Assets/Icone perfil.svg" class="perfil">
+
+            <img src="../Assets/Icone configuracoes.svg" class="config">
+
+        </div>
+
+    </header>
+
+
+    <!-- MENU LATERAL -->
+    <aside class="menu-lateral">
+
+        <div class="seta">›</div>
+
+        <a href="#">
+            <img src="../Assets/Início.svg">
+        </a>
+
+        <a href="#">
+            <img src="../Assets/ouvinte.svg">
+        </a>
+
+        <a href="#">
+            <img src="../Assets/ouvinte plus.svg">
+        </a>
+
+        <a href="#">
+            <img src="../../Assets/ouvintes.svg">
+        </a>
+
+        <a href="#">
+            <img src="../Assets/musica plus.svg">
+        </a>
+
+        <a href="#" class="inicio-baixo">
+            <img src="../Assets/Início.svg">
+        </a>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo">
+
+        <h1>Cadastrar Música</h1>
+
+        <div class="formulario">
+
+            <!-- PARTE ESQUERDA -->
+            <div class="esquerda">
+
+                <label>Nome da música</label>
+                <input type="text">
+
+
+                <div class="campos">
+
+                    <div>
+                        <label>Artista(s)</label>
+                        <input type="text">
+                    </div>
+
+                    <div>
+                        <label>Gênero</label>
+
+                        <select>
+                            <option></option>
+                            <option>Pop</option>
+                            <option>Rock</option>
+                            <option>Rap</option>
+                            <option>Sertanejo</option>
+                            <option>Eletrônica</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Tempo (BPM)</label>
+                        <input type="number">
+                    </div>
+
+                </div>
+
+
+                <label>Descrição da música</label>
+                <textarea></textarea>
+
+
+                <label>Letra da música</label>
+                <textarea class="letra"></textarea>
+
+            </div>
+
+
+            <!-- PARTE DIREITA -->
+            <div class="direita">
+
+                <!-- CAPA -->
+                <div class="upload">
+
+                    <div class="preview">
+                        <img src="../Assets/Logo MusicHub reduzida.svg">
+                    </div>
+
+                    <div>
+                        <label>Capa da música</label>
+
+                        <label for="capa" class="arquivo">
+                            Escolher jpg, png ou jpeg
+                        </label>
+
+                        <input type="file" id="capa">
+
+                    </div>
+
+                </div>
+
+
+                <!-- ÁUDIO -->
+                <div class="upload">
+
+                    <div class="preview">
+                        <img src="../Assets/Logo MusicHub reduzida.svg">
+                    </div>
+
+                    <div>
+                        <label>Áudio</label>
+
+                        <label for="audio" class="arquivo">
+                            Escolher mp3 ou wav
+                        </label>
+
+                        <input type="file" id="audio">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTÕES -->
+        <div class="botoes">
+
+            <button class="registrar">
+                Registrar música
+            </button>
+
+            <a href="#">Cancelar</a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
