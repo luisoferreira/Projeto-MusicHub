@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MusicHub - Perfil</title>
+  <link rel="stylesheet" href="Perfil.css">
+</head>
+<body>
+  <div class="tela">
+
+       <!-- Barra lateral -->
+    <aside class="barra-lateral">
+
+      <button class="botao-seta"><img src="../Assets/seta.svg" alt=""></button>
+      
+      <nav class="barra-lateral__navegacao">
+        <a href="#" aria-label="Perfil"> <img src="../Assets/Icone ouvindo.svg" alt=""></a>
+        <a href="#" aria-label="Biblioteca"><img src="../Assets/Icone biblioteca.svg" alt=""></a>
+        <a href="#" class="ativo" aria-label="Músicas favoritas"><img src="../Assets/Icone musicas curtidas.svg" alt=""></i></a>
+      </nav>
+
+       
+
+    </aside>
+ 
+    <!-- Barra superior -->
+    <header class="barra-superior">
+
+      <a href="#" class="logotipo">
+        <img src="../Assets/Logo horizontal.svg">
+      </a>
+ 
+      <div class="barra-superior__direita">
+
+        <button class="botao-busca"><img src="../Assets/Busca.svg" alt=""><span>BUSCAR</span></button>
+        <span class="divisor"></span>
+        <a href="#" class="link-biblioteca"><img src="../Assets/Icone biblioteca.svg" alt=""><span>BIBLIOTECA</span></a>
+        <span class="divisor"></span>
+        <span class="avatar"> <img src="../Assets/Icone perfil.svg" alt=""></i></span>
+        <button class="botao-configuracoes" aria-label="Configurações"> <img src="../Assets/Icone configuracoes.svg" alt=""></button>
+
+      </div>
+
+    </header>
+        
+        <div class="estrutura">
+            <aside class="barra-lateral">
+                <button class="barra-lateral__alternar" aria-label="Expandir menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                
+                <nav class="barra-lateral__menu" aria-label="Menu lateral">
+                    <a href="#" class="barra-lateral__item barra-lateral__item--ativo" aria-label="Perfil">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7z" fill="currentColor"/><path d="M6 8a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                    </a>
+                    <a href="#" class="barra-lateral__item" aria-label="Biblioteca">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h4v18H3zM9 3h4v18H9zM15.2 4.6l3.8-1 3.2 16-3.8 1z"/></svg>
+                    </a>
+                    <a href="#" class="barra-lateral__item" aria-label="Músicas">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 4v11.3A3.5 3.5 0 1 0 11 18.5V9l8-2v6.3A3.5 3.5 0 1 0 21 16.5V2z"/></svg>
+                    </a>
+                </nav>
+                
+                <a href="#" class="barra-lateral__item barra-lateral__inicio" aria-label="Início">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M9.5 21v-6h5v6" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+                </a>
+            </aside>
+            
+            <main class="conteudo-principal">
+                <section class="perfil">
+                    <div class="perfil__identidade">
+                        <span class="avatar avatar--grande"></span>
+                        <div class="perfil__nomes">
+                            <h1 class="perfil__nome">SeuNome</h1>
+                            <p class="perfil__usuario">@SeuArroba</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="perfil__estatisticas">
+                        <li>Seguindo: 6</li>
+                        <li>Curtidas: 8</li>
+                        <li>Favoritas: 6</li>
+                    </ul>
+                    
+                    <div class="perfil__descricao">
+                        <h2 class="perfil__descricao-titulo">Sua descrição</h2>
+                    </div>
+                </section>
+                
+                <section class="playlists">
+                    <h2 class="playlists__titulo">Playlists</h2>
+                    <ul class="playlists__lista">
+                        <li class="playlist">
+                            <a href="#" class="playlist__link">
+                                <span class="playlist__capa playlist__capa--funk"><b>FUNK</b></span>
+                                <span class="playlist__nome">Funk de cria</span>
+                            </a>
+                        </li>
+                        <li class="playlist">
+                            <a href="#" class="playlist__link">
+                                <span class="playlist__capa playlist__capa--pagode"></span>
+                                <span class="playlist__nome">Pagodinho na Praia</span>
+                            </a>
+                        </li>
+                        <li class="playlist">
+                            <a href="#" class="playlist__link">
+                                <span class="playlist__capa playlist__capa--academia"></span>
+                                <span class="playlist__nome">Academia</span>
+                            </a>
+                        </li>
+                        <li class="playlist">
+                            <a href="#" class="playlist__link">
+                                <span class="playlist__capa playlist__capa--estudos"></span>
+                                <span class="playlist__nome">Estudos</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+        
+    </div>
+    </body>
+    </html>
