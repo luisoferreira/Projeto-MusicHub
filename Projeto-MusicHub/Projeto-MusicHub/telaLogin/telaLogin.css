@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tela-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    background: linear-gradient(to bottom,
+            #4d11d5,
+            #251f32);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.login {
+    width: 500px;
+    margin-top: 20px;
+
+    position: relative;
+
+}
+
+/* LOGO */
+.login>img {
+    width: 300px;
+    display: block;
+    margin: 0 auto 55px;
+}
+
+/* CAMPOS */
+.campos {
+    display: flex;
+    flex-direction: column;
+}
+
+.email,
+.senha {
+    width: 475px;
+    margin: 0 auto 45px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* CAIXAS */
+input {
+    width: 475px;
+    height: 40px;
+
+    border: none;
+    border-radius: 25px;
+
+    padding: 0 18px;
+
+    outline: none;
+}
+
+/* ENTRAR */
+.botao-entrar {
+    width: 135px;
+    height: 40px;
+
+    margin: -15px auto 30px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #6122c9;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* GOOGLE */
+.google {
+    display: flex;
+    justify-content: center;
+}
+
+.botao-google {
+    width: 285px;
+    height: 50px;
+
+    border: 1px solid white;
+    border-radius: 25px;
+
+    background: transparent;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    cursor: pointer;
+}
+
+.google img {
+    width: 25px;
+}
+
+.esqueceuSenha {
+    color: #92D5FF;
+    font-weight: bold;
+    margin-top: 70px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+
+
+}
+
+.esqueceuSenha .voltar{
+    color: #ffffff;
+    margin-top: 70px;
+}
