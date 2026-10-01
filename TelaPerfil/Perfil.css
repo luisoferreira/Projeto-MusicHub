@@ -1,0 +1,119 @@
+/* ===== Base ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: "Zilla Slab", Georgia, serif;
+  color: #ffffff;
+  background: #261f33;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+svg { display: block; }
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid #3fa9f5;
+  outline-offset: 3px;
+}
+
+.tela {
+  padding: var(--topo-altura) 0 0 var(--lateral-largura);
+  min-height: 672px;
+  background: var(--roxo-lateral);
+  min-height: 100vh;
+}
+
+/* ===== Conteúdo principal ===== */
+.conteudo-principal {
+  flex: 1;
+  padding: 58px 24px 40px;
+  background:
+    radial-gradient(ellipse 55% 60% at 50% 38%, #5200c8 0%, rgba(82, 0, 200, 0.55) 35%, transparent 75%),
+    #261f33;
+  min-height: calc(100vh - var(--topo-altura));
+}
+
+/* ===== Perfil ===== */
+.perfil { width: min(520px, 100%); margin: 0 auto; }
+
+.perfil__identidade { display: flex; align-items: center; gap: 20px; }
+.perfil__nome { font-size: 1.7rem; font-weight: 700; line-height: 1.1; }
+.perfil__usuario { margin-top: 6px; font-size: 0.65rem; font-weight: 700; }
+
+.perfil__estatisticas {
+  display: flex;
+  justify-content: space-around;
+  margin: 28px 0 28px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.perfil__descricao {
+  min-height: 96px;
+  padding: 26px 22px;
+  border: 1px solid #3a2a66;
+  border-radius: 28px;
+  background: rgba(44, 31, 82, 0.85);
+}
+.perfil__descricao-titulo { font-size: 0.65rem; font-weight: 700; }
+
+/* ===== Playlists ===== */
+.playlists { width: min(540px, 100%); margin: 38px auto 0; }
+.playlists__titulo { font-size: 1.35rem; font-weight: 700; }
+
+.playlists__lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.playlist__link { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.playlist__capa {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 94px;
+  aspect-ratio: 1;
+  border-radius: 4px;
+}
+.playlist__nome { font-size: 0.78rem; text-align: center; }
+
+.playlist__capa--funk {
+  background: radial-gradient(circle at 50% 40%, #4a3a1a, #0d0b08 70%);
+  color: #e3b341;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 700;
+  border: 1px solid #1a1408;
+}
+.playlist__capa--pagode {
+  background:
+    radial-gradient(circle at 30% 35%, #f0c58a 0 8%, transparent 9%),
+    radial-gradient(circle at 60% 30%, #d99a66 0 8%, transparent 9%),
+    radial-gradient(circle at 45% 60%, #e7b37d 0 9%, transparent 10%),
+    radial-gradient(circle at 75% 65%, #c77b4d 0 9%, transparent 10%),
+    linear-gradient(160deg, #b2552e, #6b3a2a);
+}
+.playlist__capa--academia {
+  background:
+    radial-gradient(circle at 35% 70%, #4a5560 0 14%, transparent 15%),
+    radial-gradient(circle at 70% 75%, #2e363f 0 16%, transparent 17%),
+    linear-gradient(180deg, #8a97a3, #1e252c);
+}
+.playlist__capa--estudos {
+  background:
+    linear-gradient(120deg, transparent 45%, #d6524a 45% 50%, transparent 50%),
+    linear-gradient(180deg, #e9dcc0, #c9b58d);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 720px) {
+  .playlists__lista { grid-template-columns: repeat(2, 1fr); }
+}

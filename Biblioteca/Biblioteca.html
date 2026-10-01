@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <title>MusicHub – Sua Biblioteca</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="Biblioteca.css">
+  <link rel="stylesheet" href="../Styles/global.css">
+
+  <link rel="shortcut icon" href="../Assets/Logo MusicHub reduzida.svg" type="image/x-icon">
+
+  <!-- Oi késsia e Samuel -->
+</head>
+
+<body>
+
+  <!-- Conteúdo -->
+  <main class="conteudo">
+    <h1 class="conteudo__titulo">Sua Biblioteca</h1>
+
+    <section class="biblioteca">
+      <div class="abas" role="tablist">
+        <button class="aba" role="tab" aria-selected="false" data-aba="playlists">Playlists</button>
+        <button class="aba" role="tab" aria-selected="false" data-aba="podcasts">Podcasts</button>
+        <button class="aba" role="tab" aria-selected="true" data-aba="artistas">Artistas</button>
+      </div>
+      <div class="lista" id="lista" role="tabpanel"></div>
+    </section>
+  </main>
+
+  <script>
+    var DADOS = {
+      artistas: [["MC Livinho", "#2a7fd0,#7a2fb0"], ["Menos é Mais", "#2a9bd8,#e0a030"], ["Bon jovi", "#111,#333"], ["BTS", "#222,#3a3a3a"], ["Marília Mendonça", "#c08a4a,#2a3a7a"], ["Orochi", "#2fc8c0,#1a8fb0"]],
+      playlists: [["Treino Pesado", "#e0502f,#7a1fb0"], ["Sertanejo Raiz", "#c08a4a,#7a4a1a"], ["Foco Total", "#2a7fd0,#1a3a7a"], ["Churrasco de Domingo", "#e0a030,#c0402a"]],
+      podcasts: [["Podcasts Curtidos", "curtidos"], ["Adicionar Podcast", "adicionar"]]
+    };
+    var CAPAS = {
+      "Orochi": "../Assets/Emily_Warren.png",
+      "MC Livinho": "../Assets/MC_Livinho.png",
+      "Menos é Mais": "../Assets/Churrasquinho.png",
+      "Bon jovi": "../Assets/Bon_Jovi.png",
+      "BTS": "../Assets/BTS.png",
+      "Marília Mendonça": "../Assets/Marilia_Mendonca.png"
+    };
+    /* Ícones quadrados da aba Podcasts (arquivos da pasta Assets) */
+    var ICONES = {
+      curtidos: "../Assets/iconPodcastsCurtidos.svg",
+      adicionar: "../Assets/addPodcast.svg"
+    };
+    var lista = document.getElementById("lista");
+    function iniciais(n) { return n.split(" ").map(function (w) { return w[0]; }).join("").slice(0, 2).toUpperCase(); }
+    function mostrar(aba) {
+      lista.innerHTML = "";
+      lista.classList.toggle("lista--coluna", aba === "podcasts");
+      DADOS[aba].forEach(function (a) {
+        var item = document.createElement("div"); item.className = "item";
+        var capa = document.createElement("div"); capa.className = "capa";
+        if (aba === "podcasts") {
+          capa.classList.add("capa--quadrada");
+          var img = document.createElement("img");
+          img.src = ICONES[a[1]]; img.alt = "";
+          capa.appendChild(img);
+        } else if (CAPAS[a[0]]) {
+          capa.style.background = "url('" + CAPAS[a[0]] + "') center/cover";
+          capa.setAttribute("role", "img"); capa.setAttribute("aria-label", a[0]);
+        } else {
+          capa.style.background = "linear-gradient(135deg," + a[1] + ")";
+          capa.textContent = iniciais(a[0]);
+        }
+        var nome = document.createElement("span"); nome.textContent = a[0];
+        item.appendChild(capa); item.appendChild(nome); lista.appendChild(item);
+      });
+      document.querySelectorAll(".aba").forEach(function (b) {
+        b.setAttribute("aria-selected", b.dataset.aba === aba);
+      });
+    }
+    document.querySelectorAll(".aba").forEach(function (b) {
+      b.addEventListener("click", function () { mostrar(b.dataset.aba); });
+    });
+    mostrar("artistas");
+  </script>
+  <script src="../Styles/global.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MusicHub - Músicas favoritas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="favoritas.css">
+  <link rel="stylesheet" href="../Styles/global.css">
+
+  <link rel="shortcut icon" href="../Assets/Logo MusicHub reduzida.svg" type="image/x-icon">
+</head>
+<body>
+  <div class="aplicativo">
+ 
+    <!-- Conteúdo -->
+    <main class="conteudo">
+
+      <section class="cabecalho-playlist">
+
+        <div class="capa-playlist"><i class="fa-solid fa-heart"></i></div>
+        <div class="informacoes-playlist">
+          <h1>Músicas favoritas</h1>
+          <p>@username - 6 músicas, 24min</p>
+        </div>
+
+      </section>
+ 
+      <div class="acoes">
+
+        <button class="botao-reproduzir" aria-label="Reproduzir"><i class="fa-solid fa-play"></i></button>
+        <button class="botao-icone" aria-label="Ordenar"><i class="fa-solid fa-arrow-down-wide-short"></i></button>
+        <button class="botao-icone botao-icone--circular" aria-label="Baixar"><i class="fa-solid fa-arrow-down"></i></button>
+
+      </div>
+ 
+      <div class="lista-musicas" role="table">
+
+        <div class="lista-musicas__linha lista-musicas__linha--cabecalho" role="row">
+          <span>#</span><span>Título</span><span>Álbum</span><span>Favoritada em</span><span>Minutagem</span>
+        </div>
+ 
+        <div class="lista-musicas__linha" role="row">
+          <span>1</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Rectangle 70.svg" alt="" class="miniatura miniatura--1">Hotling bling</span>
+          <span>Views</span><span>14/05/2025</span><span>4:27</span>
+        </div>
+
+        <div class="lista-musicas__linha" role="row">
+          <span>2</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Rectangle 71.svg" alt="" class="miniatura miniatura--2">Billie jean</span>
+          <span>Thriller</span><span>17/08/2025</span><span>4:52</span>
+        </div>
+
+        <div class="lista-musicas__linha" role="row">
+          <span>3</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Rectangle 72.svg" alt="" class="miniatura miniatura--3">Noite fria</span>
+          <span>Ninguém Tá Puro!</span><span>26/10/2025</span><span>2:40</span>
+        </div>
+
+        <div class="lista-musicas__linha" role="row">
+          <span>4</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Rectangle 73.svg" alt="" class="miniatura miniatura--4">Cherry waves</span>
+          <span>Saturday Night Wrist</span><span>31/12/2025</span><span>5:52</span>
+        </div>
+        <div class="lista-musicas__linha" role="row">
+          <span>5</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Rectangle 74.svg" alt="" class="miniatura miniatura--5">See you again</span>
+          <span>Flower Boy</span><span>25/01/2026</span><span>3:00</span>
+        </div>
+
+        <div class="lista-musicas__linha" role="row">
+          <span>6</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Rectangle 75.svg" alt="" class="miniatura miniatura--6">Sinais de fogo</span>
+          <span>Prét-A-Porter</span><span>04/02/2026</span><span>3:36</span>
+        </div>
+
+      </div>
+
+    </main>
+ 
+  </div>
+<script src="../Styles/global.js"></script>
+</body>
+</html>

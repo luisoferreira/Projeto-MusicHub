@@ -1,0 +1,208 @@
+/* ===== Variáveis ===== */
+:root {
+  --cor-fundo-cabecalho: #4a06c9;
+  --cor-fundo-menu: #4d05d0;
+  --cor-fundo-conteudo: #5a0fd6;
+  --cor-fundo-painel-topo: #3a0a9c;
+  --cor-fundo-painel-base: #1c0d3f;
+  --cor-campo: #2b0c72;
+  --cor-texto: #ffffff;
+  --cor-texto-suave: #d9cff5;
+  --cor-linha: rgba(255, 255, 255, 0.45);
+  --cor-destaque: #3ea6e8;
+
+  --fonte-titulo: "Zilla Slab", Georgia, serif;
+  --fonte-texto: "Inter", Arial, sans-serif;
+
+  --raio-pequeno: 6px;
+  --raio-medio: 10px;
+  --raio-grande: 16px;
+
+  --largura-menu: 48px;
+  --altura-cabecalho: 56px;
+  --tamanho-capa-lista: 60px;
+  --tamanho-capa-ranking: 62px;
+}
+
+/* ===== Base ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto);
+  background: #e9e9ee;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; border: 0; background: none; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+/* ===== Layout geral (grid: lateral + topo + conteúdo) ===== */
+.tela {
+  padding: var(--topo-altura) 0 0 var(--lateral-largura);
+  min-height: 672px;
+  background: var(--roxo-lateral);
+  min-height: 100vh;
+}
+
+/* ===== Conteúdo ===== */
+.conteudo {
+  padding: 18px 28px 28px;
+  background: linear-gradient(180deg, #5a0fd6 0%, #3b0b96 100%);
+  min-height: calc(100vh - var(--topo-altura));
+}
+
+.barra-pesquisa {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 24px;
+  zoom: 1.50;
+}
+
+.campo-busca {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(100%, 352px);
+  height: 36px;
+  padding: 0 16px;
+  border-radius: var(--raio-medio);
+  background: var(--cor-campo);
+}
+.campo-busca input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-size: 12px;
+}
+
+.botao-busca2 img {
+  height: 20px;
+  
+}
+
+.botao-busca2 i { font-size: 20px; }
+.botao-busca2 span { margin-left: 10px; }
+
+.campo-busca input::placeholder { color: var(--cor-texto); opacity: 1; }
+.campo-busca:focus-within { outline: 2px solid var(--cor-destaque); }
+
+.botao-cancelar {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: var(--raio-medio);
+  background: var(--cor-campo);
+  font-family: var(--fonte-titulo);
+  font-size: 12px;
+}
+.botao-cancelar:focus-visible { outline: 2px solid var(--cor-destaque); }
+
+/* ===== Painel ===== */
+.painel {
+  
+  padding: 20px;
+  height: auto;
+  width: 1700px;
+  border-radius: var(--raio-grande);
+  background: linear-gradient(180deg,#3a0a9c, #1c0d3f);
+  margin: 0 auto;
+}
+
+.titulo-secao {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.titulo-secao2 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 14px;
+  margin-top: 60px;
+}
+
+/* ===== Buscas recentes ===== */
+.lista-buscas { width: min(100%, 665px); margin-bottom: 18px; }
+.lista-buscas {
+  zoom: 1.50;
+}
+
+.item-busca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  border-bottom: 1px solid var(--cor-linha);
+}
+.item-busca:first-child { padding-top: 0; }
+.item-busca:last-child { border-bottom: 0; }
+
+.item-busca-texto h3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.item-busca-texto p { font-family: var(--fonte-titulo); font-size: 8px; }
+
+/* ===== Capas ===== */
+.capa img {
+  flex: none;
+  width: var(--tamanho-capa-lista);
+  height: var(--tamanho-capa-lista);
+  border-radius: 3px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== Ranking ===== */
+.lista-ranking {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 0 8px;
+  zoom: 1.50; 
+}
+
+.rank-musicas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 22px;
+  text-align: center;
+  margin-top: 20px ;
+}
+.rank-musicas strong {
+  margin-top: 6px;
+  font-family: var(--fonte-titulo);
+  font-size: 13px;
+  font-weight: 700;
+}
+.rank-musicas small {
+  margin-top: 2px;
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--fonte-titulo);
+  font-size: 8px;
+  color: var(--cor-texto-suave);
+}
+
+.posicao {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  font-size: 20px;
+  font-weight: 300;
+}

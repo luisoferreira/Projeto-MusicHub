@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MusicHub - Playlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="playlist.css">
+  <link rel="stylesheet" href="../Styles/global.css">
+  <link rel="shortcut icon" href="../Assets/Logo MusicHub reduzida.svg" type="image/x-icon">
+</head>
+<body>
+  <div class="aplicativo">
+ 
+    <!-- Conteúdo -->
+    <main class="conteudo">
+
+      <section class="cabecalho-playlist">
+
+        <div class="capa-playlist"> <img src="../Assets/Academia.jpg" alt=""></div>
+        <div class="informacoes-playlist">
+          <h1>Academia</h1>
+          <p>@username - 6 músicas, 28min</p>
+        </div>
+
+      </section>
+ 
+      <div class="acoes">
+
+        <button class="botao-reproduzir" aria-label="Reproduzir"><i class="fa-solid fa-play"></i></button>
+        <button class="botao-icone" aria-label="Ordenar"><i class="fa-solid fa-arrow-down-wide-short"></i></button>
+        <button class="botao-icone botao-icone--circular" aria-label="Baixar"><i class="fa-solid fa-arrow-down"></i></button>
+        <button class="botao-icone botao-mais" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+
+      </div>
+ 
+      <div class="lista-musicas" role="table">
+
+        <div class="lista-musicas__linha lista-musicas__linha--cabecalho" role="row">
+          <span>#</span><span>Título</span><span>Álbum</span><span>Artista</span><span>Minutagem</span>
+        </div>
+ 
+        <div class="lista-musicas__linha" role="row">
+          <span>1</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Cbf.png" alt="" class="miniatura miniatura--1">Cowboys from hell</span>
+          <span>Cowboys from hell</span><span>Pantera</span><span>4:02</span>
+        </div>
+
+        <div class="lista-musicas__linha" role="row">
+          <span>2</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Lk.jpg" alt="" class="miniatura miniatura--2">One step closer</span>
+          <span>Hybrid theory</span><span>Linkin park</span><span>2:36</span>
+        </div>
+
+        <div class="lista-musicas__linha" role="row">
+          <span>3</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Hk.svg" alt="" class="miniatura miniatura--3">Hail to the king</span>
+          <span>Hail to the king</span><span>Avenged Sevenfold</span><span>5:14</span>
+        </div>
+
+        <div class="lista-musicas__linha" role="row">
+          <span>4</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Tt.svg" alt="" class="miniatura miniatura--4">The Trooper</span>
+          <span>Piece of mind</span><span>Iron Maiden</span><span>4:12</span>
+        </div>
+        <div class="lista-musicas__linha" role="row">
+          <span>5</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Sbt.svg" alt="" class="miniatura miniatura--5">Sad but true</span>
+          <span>Black Album</span><span>Metallica</span><span>5:25</span>
+        </div>
+
+        <div class="lista-musicas__linha" role="row">
+          <span>6</span>
+          <span class="lista-musicas__titulo"><img src="../Assets/Nmt.svg" alt="" class="miniatura miniatura--6">No more tears</span>
+          <span>No more tears</span><span>Ozzy Ousborne</span><span>7:24</span>
+        </div>
+
+      </div>
+
+    </main>
+ 
+  </div>
+<script src="../Styles/global.js"></script>
+</body>
+</html>

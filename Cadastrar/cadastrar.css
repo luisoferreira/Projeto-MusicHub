@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zilla Slab', serif;
+
+    min-height: 100vh;
+
+    background: linear-gradient(180deg,
+            #5000c9,
+            #34156a,
+            #211e2e);
+
+    color: white;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo {
+    height: 67px;
+
+    background: linear-gradient(90deg,
+            #35008c,
+            #6200e8);
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 20px 0 50px;
+}
+
+
+.logo {
+    width: 125px;
+}
+
+
+.menu-topo {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.buscar,
+.biblioteca {
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    cursor: pointer;
+}
+
+
+/* botão buscar */
+
+.buscar {
+    border: 2px solid white;
+
+    border-radius: 20px;
+
+    padding: 5px 13px;
+}
+
+
+.buscar img {
+    width: 20px;
+}
+
+
+/* botão biblioteca */
+
+.biblioteca img {
+    width: 28px;
+}
+
+
+.linha {
+    width: 1px;
+    height: 43px;
+
+    background: white;
+}
+
+
+.perfil {
+    width: 38px;
+}
+
+
+.config {
+    width: 33px;
+}
+
+
+
+/* =========================
+   MENU LATERAL
+========================= */
+
+.menu-lateral {
+    position: fixed;
+
+    top: 67px;
+    bottom: 0;
+    left: 0;
+
+    width: 40px;
+
+    background: #3b007f;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding-top: 45px;
+
+    border-radius: 0 0 15px 0;
+}
+
+
+.menu-lateral a {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.menu-lateral img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+
+.seta {
+    position: absolute;
+
+    top: 5px;
+    right: -13px;
+
+    width: 25px;
+    height: 33px;
+
+    background: #3b007f;
+
+    border-radius: 0 20px 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+
+.inicio-baixo {
+    position: absolute;
+
+    bottom: 15px;
+}
+
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo {
+    margin-left: 40px;
+
+    padding: 14px 60px;
+}
+
+
+h1 {
+    text-align: center;
+
+    font-size: 29px;
+
+    margin-bottom: 40px;
+}
+
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.formulario {
+    width: 850px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+.esquerda {
+    width: 490px;
+}
+
+
+.direita {
+    width: 315px;
+
+    padding-top: 17px;
+}
+
+
+label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    background: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 8px;
+
+    outline: none;
+}
+
+
+input,
+select {
+    height: 39px;
+}
+
+
+.campos {
+    display: flex;
+
+    gap: 46px;
+
+    margin-top: 19px;
+
+    margin-bottom: 27px;
+}
+
+
+.campos>div {
+    width: 120px;
+}
+
+
+textarea {
+    height: 64px;
+
+    resize: none;
+
+    margin-bottom: 27px;
+
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+textarea.letra {
+    height: 113px;
+
+    margin-bottom: 0;
+}
+
+.upload {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 94px;
+}
+
+
+.preview {
+    width: 117px;
+    height: 108px;
+
+    background: #241d32;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.preview img {
+    width: 88px;
+    height: 88px;
+}
+
+
+.arquivo {
+    width: 181px;
+
+    height: 38px;
+
+    background: #ddd;
+
+    color: black;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+
+input:not([type="file"]) {
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.botoes {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 73px;
+}
+
+
+.registrar {
+    width: 183px;
+
+    height: 39px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #9d2df1;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.botoes a {
+    color: red;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-top: 5px;
+}
+
+@media (max-width: 900px) {
+
+    .formulario {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .esquerda,
+    .direita {
+        width: 100%;
+
+        max-width: 490px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .menu-topo .biblioteca,
+    .menu-topo .linha {
+        display: none;
+    }
+
+    .topo {
+        padding-left: 50px;
+    }
+
+    .conteudo {
+        padding: 20px;
+    }
+
+    .campos {
+        gap: 10px;
+    }
+
+    .campos>div {
+        flex: 1;
+    }
+
+}

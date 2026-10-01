@@ -1,0 +1,247 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #211e2d;
+    color: white;
+    font-family: 'Zilla Slab', serif;
+}
+
+/* =========================================
+   ÁREA PRINCIPAL
+========================================= */
+
+.conteudo {
+    position: fixed;
+    top: var(--topo-altura);
+    left: var(--lateral-largura);
+    right: 215px;
+    bottom: 64px;
+    background-color: #242130;
+    overflow: hidden;
+}
+
+.visualizador {
+    position: absolute;
+    inset: 0;
+    background: none;
+}
+
+.caixa-letra {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 75%;
+    background-color: rgba(75, 91, 157, 0.75);
+    border-radius: 15px;
+    padding-top: 45px;
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+.letra {
+    font-size: 42px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.letra p {
+    margin-bottom: 38px;
+}
+
+/* =========================================
+   PAINEL DO ARTISTA
+========================================= */
+
+.artista {
+    position: fixed;
+    top: var(--topo-altura);
+    right: 0;
+    bottom: 64px;
+    width: 215px;
+    background: linear-gradient(180deg, #4200a9, #3b00a2);
+    padding-top: 54px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+.artista h3 {
+    font-size: 14px;
+    margin-bottom: 13px;
+}
+
+.foto-artista {
+    width: 176px;
+    height: 247px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.artista h2 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.artista h2 i {
+    font-size: 10px;
+}
+
+.ouvintes {
+    font-size: 10px;
+}
+
+.ouvintes button {
+    float: right;
+    background-color: #5100c9;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-family: 'Zilla Slab', serif;
+    font-size: 10px;
+    padding: 2px 7px;
+}
+
+.descricao {
+    clear: both;
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+/* =========================================
+   PLAYER
+========================================= */
+
+.player {
+    position: fixed;
+    left: var(--lateral-largura);
+    right: 0;
+    bottom: 0;
+    height: 64px;
+    background: linear-gradient(90deg, #4a00ae, #6800e6);
+    display: flex;
+    align-items: center;
+    z-index: 20;
+}
+
+.capa {
+    width: 45px;
+    height: 64px;
+    object-fit: cover;
+}
+
+.informacoes-musica {
+    width: 210px;
+    margin-left: 45px;
+}
+
+.informacoes-musica h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.informacoes-musica p {
+    font-size: 9px;
+}
+
+.controles {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    width: 300px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+    font-size: 20px;
+}
+
+.botao-pause {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-pause img {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+
+.icone-pular {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.icone-repetir {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.icone-voltar {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.icone-aleatorio {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.barra-musica {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+.progresso {
+    height: 4px;
+    flex: 1;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.volume {
+    margin-left: auto;
+    margin-right: 23px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 16px;
+}
+
+.barra-volume {
+    width: 72px;
+    height: 4px;
+    background-color: white;
+    border-radius: 3px;
+}

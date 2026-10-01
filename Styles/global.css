@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+/* =========================================================
+   GLOBAL — barra lateral + header
+   Markup injetado por Styles/global.js em todas as páginas
+   (exceto telaLogin e Cadastrar).
+   As páginas usam as variáveis abaixo para deixar espaço
+   para o header (topo) e para a barra lateral.
+========================================================= */
+
+:root {
+  --topo-altura: 100px;
+  --lateral-largura: 80px;
+}
+
+/* Reset restrito aos elementos do global (specificity zero, não briga com a página) */
+:where(.barra-lateral, .barra-superior),
+:where(.barra-lateral, .barra-superior) * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.barra-lateral,
+.barra-superior {
+  font-family: "Zilla Slab", Georgia, serif;
+  color: #fff;
+}
+
+.barra-lateral a,
+.barra-superior a { color: inherit; text-decoration: none; }
+
+.barra-lateral button,
+.barra-superior button {
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.barra-lateral img,
+.barra-superior img { display: block; }
+
+/* ===== Barra lateral ===== */
+.barra-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--lateral-largura);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #3a0896 0%, #430aa8 100%);
+  z-index: 20;
+}
+
+.barra-lateral__alternar {
+  position: absolute;
+  top: 140px;
+  right: -7px;
+  width: 35px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  background: #3d0a9e;
+  border-radius: 50%;
+}
+
+.barra-lateral__navegacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 200px;
+  font-size: 15px;
+}
+
+.barra-lateral__navegacao img { height: 45px; }
+
+.barra-lateral__navegacao a { opacity: .95; }
+
+/* Página atual: ícone pintado de #26A1D7 (filter, porque o SVG vem de <img>).
+   Fora da página atual o ícone fica branco, como o SVG original. */
+.barra-lateral__navegacao a.ativo img {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(89%) saturate(265%) hue-rotate(153deg) brightness(177%) contrast(154%);
+}
+
+.barra-lateral__inicio {
+  margin-top: auto;
+  width: 100%;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+}
+
+.barra-lateral__inicio:hover,
+.barra-lateral__inicio.ativo { color: #26A1D7; }
+
+/* ===== Header (barra superior) ===== */
+.barra-superior {
+  position: fixed;
+  top: 0;
+  left: var(--lateral-largura);
+  right: 0;
+  height: var(--topo-altura);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 29px 0 36px;
+  background: linear-gradient(90deg, #4a08b0 0%, #6410e0 60%, #7420f0 100%);
+  box-shadow: 0 4px 14px rgba(10, 0, 40, .45);
+  z-index: 10;
+}
+
+.logotipo img {
+  height: 140px;
+  position: relative;
+  top: 11px; /* o desenho fica acima do centro do SVG, então descemos um pouco */
+}
+
+.barra-superior__direita {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.botao-busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 20px 0 10px;
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  font-size: 10px;
+  letter-spacing: .3px;
+}
+
+.botao-busca:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.botao-busca img { height: 30px; }
+.botao-busca span { margin-left: 10px; }
+
+.divisor {
+  width: 1px;
+  height: 53px;
+  background: #fff;
+}
+
+.link-biblioteca {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 8.5px;
+  letter-spacing: .3px;
+}
+
+.link-biblioteca img { height: 30px; }
+
+.avatar img { height: 35px; }
+.botao-configuracoes img { height: 30px; }
+
+/* ===== Mobile ===== */
+@media (max-width: 640px) {
+  :root { --lateral-largura: 56px; }
+
+  .barra-lateral__navegacao { margin-top: 130px; gap: 34px; }
+  .barra-lateral__navegacao img { height: 32px; }
+  .barra-lateral__alternar { display: none; }
+
+  .barra-superior { padding: 0 12px; }
+  .logotipo img { height: 100px; }
+  .link-biblioteca span, .botao-busca span, .divisor { display: none; }
+  .botao-busca { padding: 0 10px; }
+  .barra-superior__direita { gap: 14px; }
+}

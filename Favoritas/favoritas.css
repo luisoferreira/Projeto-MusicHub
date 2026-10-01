@@ -1,0 +1,187 @@
+/* ===== Variáveis ===== */
+:root {
+  --roxo-topo: #5000c8;
+  --roxo-meio: #4a00b8;
+  --roxo-fundo: #2a1a4a;
+  --roxo-lateral: #3d0a9e;
+  --roxo-destaque: #5a00e6;
+  --azul-play: #2f9fd8;
+  --azul-ativo: #3aa7e8;
+  --branco: #ffffff;
+  --texto-suave: #d9cffa;
+  --fonte: "Zilla Slab", Georgia, "Times New Roman", serif;
+}
+ 
+/* ===== Reset ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+html, body { height: 100%; }
+ 
+body {
+  font-family: var(--fonte);
+  color: var(--branco);
+  background: #ffffff;
+}
+ 
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+img { display: block; }
+ 
+/* ===== Layout geral (grid: lateral + topo + conteúdo) ===== */
+.aplicativo {
+  padding: var(--topo-altura) 0 0 var(--lateral-largura);
+  height: 100vh;
+  min-height: 672px;
+  background: var(--roxo-lateral);
+  overflow: hidden;
+}
+ 
+/* ===== Conteúdo principal ===== */
+.conteudo {
+  height: 100%;
+  padding: 22px 72px 29px 110px;
+  background: linear-gradient(180deg, #5200cc 0%, #4a00b8 30%, #3a1180 65%, #2a1a4a 100%);
+  border-top-left-radius: 0;
+  overflow-y: auto;
+}
+ 
+/* Cabeçalho da playlist */
+.cabecalho-playlist {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+ 
+.capa-playlist {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #5b12c4 0%, #3d00a0 60%, #4a0fb5 100%);
+  box-shadow: 0 7px 26px rgba(15, 0, 60, .55);
+  font-size: 90px;
+}
+.capa-playlist i {
+  color: #fff;
+  filter: drop-shadow(0 4px 8px rgba(20, 0, 80, .45));
+}
+ 
+.informacoes-playlist { padding-top: 7px; }
+ 
+.informacoes-playlist h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+ 
+.informacoes-playlist p {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 400;
+}
+ 
+/* Botões de ação */
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 10px;
+}
+ 
+.botao-reproduzir {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--azul-play);
+  color: #2b0a78;
+  font-size: 22px;
+  padding-left: 4px;
+  transition: transform .15s ease, filter .15s ease;
+}
+.botao-reproduzir:hover { transform: scale(1.06); filter: brightness(1.08); }
+ 
+.botao-icone { font-size: 35px; margin-left: 5px; }
+.botao-icone--circular {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  margin-left: 0;
+  border: 1.5px solid var(--branco);
+  border-radius: 50%;
+  font-size: 18px;
+}
+.botao-icone:hover { color: var(--azul-ativo); }
+.botao-icone--circular:hover { border-color: var(--azul-ativo); }
+ 
+/* ===== Tabela de músicas ===== */
+.lista-musicas {
+  margin-top: 31px;
+  font-size: 25px;
+}
+ 
+.lista-musicas__linha {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1.9fr) minmax(0, 1.5fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
+  align-items: center;
+  min-height: 50px;
+  text-align: center;
+}
+ 
+/* # e Título alinhados à esquerda */
+.lista-musicas__linha > :nth-child(1),
+.lista-musicas__linha > :nth-child(2) { text-align: left; }
+ 
+.lista-musicas__linha--cabecalho {
+  min-height: 45px;
+  margin-bottom: 5px;
+  color: var(--texto-suave);
+  font-size: 22px;
+}
+ 
+.lista-musicas__linha:not(.lista-musicas__linha--cabecalho) > :nth-child(3),
+.lista-musicas__linha:not(.lista-musicas__linha--cabecalho) > :nth-child(4),
+.lista-musicas__linha:not(.lista-musicas__linha--cabecalho) > :nth-child(5) {
+  font-family: "Zilla Slab", Georgia, serif;
+  letter-spacing: .2px;
+}
+ 
+.lista-musicas__linha:not(.lista-musicas__linha--cabecalho):hover {
+  background: rgba(255, 255, 255, .07);
+  border-radius: 4px;
+}
+ 
+.lista-musicas__titulo {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding-left: 0;
+}
+ 
+.miniatura {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 1px;
+  background: #555; /* aparece enquanto a capa não existe */
+}
+ 
+/* ===== Responsivo ===== */
+@media (max-width: 900px) {
+  .conteudo { padding: 22px 34px 29px 40px; }
+  .informacoes-playlist h1 { font-size: 36px; }
+}
+ 
+@media (max-width: 640px) {
+  .conteudo { padding: 19px 17px 24px 20px; }
+  .cabecalho-playlist { flex-direction: column; align-items: flex-start; gap: 19px; }
+  .informacoes-playlist h1 { font-size: 31px; }
+ 
+  /* esconde Álbum e Favoritada em, mantém Título e Minutagem */
+  .lista-musicas__linha { grid-template-columns: 26px 1fr 84px; }
+  .lista-musicas__linha > :nth-child(3),
+  .lista-musicas__linha > :nth-child(4) { display: none; }
+}
